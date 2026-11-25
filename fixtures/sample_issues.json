@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ISSUE-101",
+    "title": "Security: path traversal bypass in report export handler",
+    "body": "When passing ../../outside.md to export_triage_report, the path was not validated against workspace root. Steps to reproduce: 1. Run audit. 2. Pass relative parent path. Expected: ValueError. Actual: write attempted. Version: 0.1.0.",
+    "labels": ["security", "bug"],
+    "has_repro": true,
+    "is_security": true
+  },
+  {
+    "id": "ISSUE-102",
+    "title": "CLI crashes with UnicodeEncodeError on Windows cp1252 terminals",
+    "body": "Running `bounty-triage audit` on default Windows PowerShell fails when printing emoji status markers. Traceback shows cp1252 codec error. Steps to reproduce: set PYTHONIOENCODING=cp1252 and run CLI. Expected: clean ASCII/UTF-8 output. Actual: traceback.",
+    "labels": ["bug", "windows"],
+    "has_repro": true,
+    "is_security": false
+  },
+  {
+    "id": "ISSUE-103",
+    "title": "Add SARIF export option for CI pipelines",
+    "body": "Would be great to export license and secret findings in SARIF 2.1.0 JSON for GitHub Code Scanning.",
+    "labels": ["enhancement"],
+    "has_repro": false,
+    "is_security": false
+  },
+  {
+    "id": "ISSUE-104",
+    "title": "It doesn't work",
+    "body": "Broke on my laptop.",
+    "labels": [],
+    "has_repro": false,
+    "is_security": false
+  }
+]
