@@ -1,0 +1,31 @@
+{
+  "default_agent": "bounty-triage-readonly",
+  "runtime": {
+    "log_level": "WARNING"
+  },
+  "agents": {
+    "bounty-triage-readonly": {
+      "name": "bounty-triage-readonly",
+      "provider": "echo",
+      "default_channel": "console",
+      "structural_tool_results": true
+    },
+    "bounty-triage-cortensor": {
+      "name": "bounty-triage-cortensor",
+      "provider": "openai_compatible",
+      "model": "oss-20b",
+      "base_url": "https://api.cortensor.app/v1",
+      "api_key_env": "CORTENSOR_API_KEY",
+      "default_channel": "console",
+      "structural_tool_results": true
+    },
+    "bounty-triage-ollama": {
+      "name": "bounty-triage-ollama",
+      "provider": "ollama",
+      "model": "llama3.1",
+      "base_url": "http://127.0.0.1:11434",
+      "default_channel": "console",
+      "structural_tool_results": true
+    }
+  }
+}
